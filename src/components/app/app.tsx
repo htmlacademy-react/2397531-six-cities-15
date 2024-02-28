@@ -11,7 +11,7 @@ import ScrollToTop from '../scroll-to-top/scroll-to-top';
 import Layout from '../layout/layout';
 
 type AppProps = {
-  countPlace: number
+  countPlace: number;
 }
 
 function App({countPlace}: AppProps): JSX.Element {
@@ -28,14 +28,14 @@ function App({countPlace}: AppProps): JSX.Element {
               <PrivateRoute authStatus={AuthorizationStatus.NoAuth}>
                 <FavouritesPage/>
               </PrivateRoute>
-          }
+            }
           />
           <Route path={AppRoutes.Offer} element={<OfferPage offerInfo={OFFER_CARD}/>} />
           <Route path={AppRoutes.NotFound} element={<NotFoundPage/>} />
         </Route>
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
 export default App;

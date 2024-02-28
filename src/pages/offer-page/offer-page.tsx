@@ -1,22 +1,22 @@
 
-import { Review } from "../../components/review-list/review-list";
-import Card from "../../components/card/card";
-import { cardsData } from "../../mock";
-import ReviewForm from "../../components/review-form/review-form";
-import ReviewList from "../../components/review-list/review-list";
+import { Review } from '../../components/review-list/review-list';
+import Card from '../../components/card/card';
+import { cardsData } from '../../mock';
+import ReviewForm from '../../components/review-form/review-form';
+import ReviewList from '../../components/review-list/review-list';
 
 type Offer = {
-  id: string | number,
-  title: string,
-  type: string,
-  price: number,
-  images: string[],
-  description: string,
-  bedrooms: number,
-  isPremium: boolean,
-  goods: string[],
-  maxAdults: number,
-  comments: Review[]
+  id: string | number;
+  title: string;
+  type: string;
+  price: number;
+  images: string[];
+  description: string;
+  bedrooms: number;
+  isPremium: boolean;
+  goods: string[];
+  maxAdults: number;
+  comments: Review[];
 }
 
 type OfferPageProps = {
@@ -28,7 +28,7 @@ function ImageItem({image}: {image: string}): JSX.Element {
     <div className="offer__image-wrapper">
       <img className="offer__image" src={image} alt="Photo studio" />
     </div>
-  )
+  );
 }
 
 function ImagesList({images}: {images: string[]}): JSX.Element {
@@ -38,13 +38,13 @@ function ImagesList({images}: {images: string[]}): JSX.Element {
         {images.map((image) => <ImageItem image={image} key={image}/>)}
       </div>
     </div>
-  )
+  );
 }
 
 function FeatureItem({feature}: {feature: string}): JSX.Element {
   return (
     <li className="offer__inside-item">{feature}</li>
-  )
+  );
 }
 
 function FeaturesList({features}: {features: string[]}): JSX.Element {
@@ -52,7 +52,7 @@ function FeaturesList({features}: {features: string[]}): JSX.Element {
     <ul className="offer__inside-list">
       {features.map((feature) => <FeatureItem feature={feature} key={feature}/>)}
     </ul>
-  )
+  );
 }
 
 function OfferPage({offerInfo}: OfferPageProps): JSX.Element {

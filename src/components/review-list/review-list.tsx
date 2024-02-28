@@ -1,14 +1,14 @@
 type User = {
-  name: string,
-  avatarUrl: string
+  name: string;
+  avatarUrl: string;
 }
 
 export type Review = {
-  id: string,
-  date: string,
-  user: User,
-  comment: string,
-  rating: number
+/*   id: string; */
+  date: string;
+  user: User;
+  comment: string;
+/*   rating: number; */
 }
 
 function ReviewItem({date, user, comment}: Review): JSX.Element {
@@ -29,7 +29,7 @@ function ReviewItem({date, user, comment}: Review): JSX.Element {
       <div className="reviews__info">
         <div className="reviews__rating rating">
           <div className="reviews__stars rating__stars">
-            <span style={{ width: "80%" }} />
+            <span style={{ width: '80%' }} />
             <span className="visually-hidden">Rating</span>
           </div>
         </div>
@@ -42,15 +42,15 @@ function ReviewItem({date, user, comment}: Review): JSX.Element {
       </div>
     </li>
 
-  )
+  );
 }
 
 function ReviewList({reviews}: {reviews: Review[]}): JSX.Element {
   return(
     <ul className="reviews__list">
-      {reviews.map((review) => <ReviewItem {...review}/>)}
+      {reviews.map((review) => <ReviewItem {...review} key={review.id} />)}
     </ul>
-  )
+  );
 }
 
 export default ReviewList;

@@ -4,7 +4,7 @@ import CityList from '../../components/cities-list/cities-list';
 import SortTypes from '../../components/sort-type/sort-type';
 
 type MainProps = {
-  countPlace: number
+  countPlace: number;
 }
 
 function MainPage({countPlace}: MainProps): JSX.Element {
@@ -39,7 +39,7 @@ function MainPage({countPlace}: MainProps): JSX.Element {
         </div>
       </div>
     </main>
-  )
+  );
 }
 
 export default MainPage;

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { AppRoutes } from "../../const";
+import { Link } from 'react-router-dom';
+import { AppRoutes } from '../../const';
 
 function Logo(): JSX.Element {
   return (
@@ -12,7 +12,7 @@ function Logo(): JSX.Element {
         height={41}
       />
     </Link>
-  )
+  );
 }
 
 export default Logo;

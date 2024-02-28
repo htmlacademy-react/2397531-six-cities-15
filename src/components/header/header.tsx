@@ -1,4 +1,4 @@
-import Logo from "../logo/logo";
+import Logo from '../logo/logo';
 
 function Header(): JSX.Element {
   return (
@@ -29,7 +29,7 @@ function Header(): JSX.Element {
         </div>
       </div>
     </header>
-  )
+  );
 }
 
 export default Header;

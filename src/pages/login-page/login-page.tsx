@@ -39,7 +39,7 @@ function LoginPage(): JSX.Element {
         </section>
       </div>
     </main>
-  )
+  );
 }
 
 export default LoginPage;

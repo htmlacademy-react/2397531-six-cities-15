@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 type Card = {
-  id: number,
-  title: string,
-  type: string,
-  price: number,
-  isPremium: boolean,
-  previewImage: string
+  id: number;
+  title: string;
+  type: string;
+  price: number;
+  isPremium: boolean;
+  previewImage: string;
 }
 
 type CardProps = {
@@ -19,7 +19,7 @@ function Premium(): JSX.Element {
     <div className="place-card__mark">
       <span>Premium</span>
     </div>
-  )
+  );
 }
 
 function Card({card, className = 'cities'}: CardProps): JSX.Element {
@@ -53,7 +53,7 @@ function Card({card, className = 'cities'}: CardProps): JSX.Element {
         </div>
         <div className="place-card__rating rating">
           <div className="place-card__stars rating__stars">
-            <span style={{ width: "60%" }} />
+            <span style={{ width: '60%' }} />
             <span className="visually-hidden">Rating</span>
           </div>
         </div>
@@ -63,7 +63,7 @@ function Card({card, className = 'cities'}: CardProps): JSX.Element {
         <p className="place-card__type">{type}</p>
       </div>
     </article>
-  )
+  );
 }
 
 export default Card;

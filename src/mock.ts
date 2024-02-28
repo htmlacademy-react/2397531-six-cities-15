@@ -65,6 +65,6 @@ const OFFER_CARD = {
       rating: 4,
     }
   ]
-}
+};
 
 export {OFFER_CARD};

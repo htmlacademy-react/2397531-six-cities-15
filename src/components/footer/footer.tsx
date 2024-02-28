@@ -1,5 +1,5 @@
-import { AppRoutes } from "../../const";
-import { Link } from "react-router-dom";
+import { AppRoutes } from '../../const';
+import { Link } from 'react-router-dom';
 
 function Footer(): JSX.Element {
   return (
@@ -14,7 +14,7 @@ function Footer(): JSX.Element {
         />
       </Link>
     </footer>
-  )
+  );
 }
 
 export default Footer;

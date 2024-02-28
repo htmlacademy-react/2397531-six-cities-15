@@ -6,12 +6,12 @@ type CityListProps = {
 
 function CityItem({city}: CityListProps): JSX.Element {
   return (
-      <li className="locations__item">
-        <a className="locations__item-link tabs__item" href="#">
-          <span>{city}</span>
-        </a>
-      </li>
-  )
+    <li className="locations__item">
+      <a className="locations__item-link tabs__item" href="#">
+        <span>{city}</span>
+      </a>
+    </li>
+  );
 }
 
 function CityList (): JSX.Element {
@@ -19,7 +19,7 @@ function CityList (): JSX.Element {
     <ul className="locations__list tabs__list">
       {CITIESLIST.map((cityName) => <CityItem city={cityName} key={cityName}/>)}
     </ul>
-  )
+  );
 }
 
 export default CityList;
