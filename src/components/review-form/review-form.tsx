@@ -1,8 +1,8 @@
-import { RatingNames } from "../../const";
+import { RatingNames } from '../../const';
 
 type RatingInputProps = {
-  value: string,
-  title: string
+  value: string;
+  title: string;
 }
 
 function RatingItem({value, title}: RatingInputProps): JSX.Element {
@@ -25,7 +25,7 @@ function RatingItem({value, title}: RatingInputProps): JSX.Element {
         </svg>
       </label>
     </>
-  )
+  );
 }
 
 function ReviewForm(): JSX.Element {
@@ -42,11 +42,11 @@ function ReviewForm(): JSX.Element {
         id="review"
         name="review"
         placeholder="Tell how was your stay, what you like and what can be improved"
-        defaultValue={""}
+        defaultValue={''}
       />
       <div className="reviews__button-wrapper">
         <p className="reviews__help">
-          To submit review please make sure to set{" "}
+          To submit review please make sure to set{' '}
           <span className="reviews__star">rating</span> and describe your stay with
           at least <b className="reviews__text-amount">50 characters</b>.
         </p>
@@ -59,7 +59,7 @@ function ReviewForm(): JSX.Element {
         </button>
       </div>
     </form>
-  )
+  );
 }
 
 export default ReviewForm;

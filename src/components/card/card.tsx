@@ -1,10 +1,17 @@
+import { Link } from 'react-router-dom';
+
+type Card = {
+  id: number;
+  title: string;
+  type: string;
+  price: number;
+  isPremium: boolean;
+  previewImage: string;
+}
+
 type CardProps = {
-  id: number,
-  title: string,
-  type: string,
-  price: number,
-  isPremium: boolean,
-  previewImage: string
+  card: Card;
+  className?: string;
 }
 
 function Premium(): JSX.Element {
@@ -12,16 +19,16 @@ function Premium(): JSX.Element {
     <div className="place-card__mark">
       <span>Premium</span>
     </div>
-  )
+  );
 }
 
-function Card(cardData: CardProps): JSX.Element {
-  const {title, type, price, isPremium, previewImage} = cardData;
+function Card({card, className = 'cities'}: CardProps): JSX.Element {
+  const {id, title, type, price, isPremium, previewImage} = card;
   return (
-    <article className="cities__card place-card">
+    <article className={`${className}__card place-card`}>
       {isPremium && <Premium />}
-      <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href="#">
+      <div className={`${className}__image-wrapper place-card__image-wrapper`}>
+        <Link to={`/offer/${id}`}>
           <img
             className="place-card__image"
             src={previewImage}
@@ -29,7 +36,7 @@ function Card(cardData: CardProps): JSX.Element {
             height={200}
             alt="Place image"
           />
-        </a>
+        </Link>
       </div>
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
@@ -46,17 +53,17 @@ function Card(cardData: CardProps): JSX.Element {
         </div>
         <div className="place-card__rating rating">
           <div className="place-card__stars rating__stars">
-            <span style={{ width: "60%" }} />
+            <span style={{ width: '60%' }} />
             <span className="visually-hidden">Rating</span>
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">{title}</a>
+          <Link to={`/offer/${id}`}>{title}</Link>
         </h2>
         <p className="place-card__type">{type}</p>
       </div>
     </article>
-  )
+  );
 }
 
 export default Card;
