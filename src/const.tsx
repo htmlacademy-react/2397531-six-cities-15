@@ -20,6 +20,12 @@ const AppRoutes = {
   Login: '/login',
   NotFound: '*',
   Offer: '/offer/:id'
+} as const;
+
+export enum AuthorizationStatus {
+  Auth = 'AUTH',
+  NoAuth = 'NO_AUTH',
+  Unknown = 'UNKNOWN',
 }
 
 export {CitiesList, CountPlaces, SortOptions, RatingNames, AppRoutes};
