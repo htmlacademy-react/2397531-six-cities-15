@@ -1,10 +1,15 @@
-type CardProps = {
+type Card = {
   id: number,
   title: string,
   type: string,
   price: number,
   isPremium: boolean,
   previewImage: string
+}
+
+type CardProps = {
+  card: Card;
+  className?: string;
 }
 
 function Premium(): JSX.Element {
@@ -15,12 +20,12 @@ function Premium(): JSX.Element {
   )
 }
 
-function Card(cardData: CardProps): JSX.Element {
-  const {title, type, price, isPremium, previewImage} = cardData;
+function Card({card, className = 'cities'}: CardProps): JSX.Element {
+  const {title, type, price, isPremium, previewImage} = card;
   return (
-    <article className="cities__card place-card">
+    <article className={`${className}__card place-card`}>
       {isPremium && <Premium />}
-      <div className="cities__image-wrapper place-card__image-wrapper">
+      <div className={`${className}__image-wrapper place-card__image-wrapper`}>
         <a href="#">
           <img
             className="place-card__image"

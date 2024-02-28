@@ -14,4 +14,12 @@ const RatingNames: {[index: string]: string} = {
   '5': 'perfect'
 };
 
-export {CitiesList, CountPlaces, SortOptions, RatingNames};
+const AppRoutes = {
+  Main: '/',
+  Favourites: '/favorites',
+  Login: '/login',
+  NotFound: '*',
+  Offer: '/offer/:id'
+}
+
+export {CitiesList, CountPlaces, SortOptions, RatingNames, AppRoutes};
