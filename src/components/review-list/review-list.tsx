@@ -4,11 +4,11 @@ type User = {
 }
 
 export type Review = {
-/*   id: string; */
+  id: string;
   date: string;
   user: User;
   comment: string;
-/*   rating: number; */
+  rating: number;
 }
 
 function ReviewItem({date, user, comment}: Review): JSX.Element {
