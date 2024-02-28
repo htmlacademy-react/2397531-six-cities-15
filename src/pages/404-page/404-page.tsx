@@ -1,14 +1,10 @@
-import Header from "../../components/header/header";
-import Footer from "../../components/footer/footer";
 import { Link } from "react-router-dom";
 
 function NotFoundPage(): JSX.Element {
   return (
     <>
-      <Header />
-      <h1>404. Страница не найдена.</h1>
-      <Link to="/">Главная страница</Link>
-      <Footer />
+      <p style={{textAlign: 'center', fontSize: '36px'}}><b>Ошибка 404. Страница не найдена.</b></p>
+      <Link style={{textAlign: 'center', color: '#4481c3'}} to="/">Главная страница</Link>
     </>
   )
 }

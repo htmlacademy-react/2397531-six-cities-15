@@ -1,7 +1,7 @@
-import { SortOptions } from "../../const";
+import { SORTOPTIONS } from "../../const";
 
 type SortProps = {
-  sortName: typeof SortOptions[number],
+  sortName: typeof SORTOPTIONS[number],
   isActive: boolean
 }
 
@@ -16,7 +16,7 @@ function SortType({sortName, isActive}: SortProps): JSX.Element {
 function SortTypes(): JSX.Element {
   return (
     <ul className="places__options places__options--custom"> // places__options--opened
-      {SortOptions.map((sort, index) => <SortType sortName={sort} isActive={index === 0} key={sort}/>)}
+      {SORTOPTIONS.map((sort, index) => <SortType sortName={sort} isActive={index === 0} key={sort}/>)}
     </ul>
   )
 }

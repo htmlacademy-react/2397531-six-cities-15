@@ -1,6 +1,6 @@
-const CitiesList = ['Paris', 'Cologne', 'Brussels', 'Amsterdam', 'Hamburg', 'Dusseldorf'];
+const CITIESLIST = ['Paris', 'Cologne', 'Brussels', 'Amsterdam', 'Hamburg', 'Dusseldorf'] as const;
 
-const SortOptions = ['Popular', 'Price: low to high', 'Price: high to low', 'Top rated first'];
+const SORTOPTIONS = ['Popular', 'Price: low to high', 'Price: high to low', 'Top rated first'] as const;
 
 const CountPlaces = {
   CountOfferPlaces: 312
@@ -28,4 +28,4 @@ export enum AuthorizationStatus {
   Unknown = 'UNKNOWN',
 }
 
-export {CitiesList, CountPlaces, SortOptions, RatingNames, AppRoutes};
+export {CITIESLIST, CountPlaces, SORTOPTIONS, RatingNames, AppRoutes};

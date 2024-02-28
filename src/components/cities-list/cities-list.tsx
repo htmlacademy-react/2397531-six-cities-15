@@ -1,7 +1,7 @@
-import { CitiesList } from '../../const';
+import { CITIESLIST } from '../../const';
 
 type CityListProps = {
-  city: typeof CitiesList[number];
+  city: typeof CITIESLIST[number];
 }
 
 function CityItem({city}: CityListProps): JSX.Element {
@@ -17,7 +17,7 @@ function CityItem({city}: CityListProps): JSX.Element {
 function CityList (): JSX.Element {
   return (
     <ul className="locations__list tabs__list">
-      {CitiesList.map((cityName) => <CityItem city={cityName} key={cityName}/>)}
+      {CITIESLIST.map((cityName) => <CityItem city={cityName} key={cityName}/>)}
     </ul>
   )
 }
